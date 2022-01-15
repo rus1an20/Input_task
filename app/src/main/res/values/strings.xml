@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="cfc">CFC</string>
+    <string name="menu">Бургер\n\nКрылышки\n\nКола\n\nКетчуп</string>
+    <string name="price">3$\n\n5$\n\n2$\n\n1$</string>
+    <string name="ost">остр.</string>
+    <string name="comment">Комментарий</string>
+    <string name="plus_butt">+</string>
+    <string name="minus_but">-</string>
+    <string name="num">0</string>
+    <string name="result">Итого:</string>
+    <string name="sum">0</string>
+    <string name="doll">$</string>
+    <string name="go">Заказать)</string>
+</resources>
