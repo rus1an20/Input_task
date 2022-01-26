@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        Button plusButtonBurg = findViewById(R.id.plus_button_burg);
+        Button minusButtonBurg = findViewById(R.id.minus_button_burg);
+        Button plusButtonChick = findViewById(R.id.plus_button_chick);
+        Button minusButtonChick = findViewById(R.id.minus_button_chick);
+        Button plusButtonCola = findViewById(R.id.plus_button_cola);
+        Button minusButtonCola = findViewById(R.id.minus_button_cola);
+        Button plusButtonSous = findViewById(R.id.plus_button_sous);
+        Button minusButtonSous = findViewById(R.id.minus_button_sous);
+        Button go = findViewById(R.id.go);
+
+        plusButtonBurg.setOnClickListener(this::PlusBurg);
+        minusButtonBurg.setOnClickListener(this::MinusBurg);
+        plusButtonChick.setOnClickListener(this::PlusChick);
+        minusButtonChick.setOnClickListener(this::MinusChick);
+        plusButtonCola.setOnClickListener(this::PlusCola);
+        minusButtonCola.setOnClickListener(this::MinusCola);
+        plusButtonSous.setOnClickListener(this::PlusSous);
+        minusButtonSous.setOnClickListener(this::MinusSous);
+        go.setOnClickListener(this::Go);
     }
 
     public void PlusBurg(View view) {
@@ -94,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     public static void minus(TextView textView) {
         String num = (String) textView.getText();
         int plusOne = Integer.parseInt(num);
-        if (plusOne > 0) {
+        if (plusOne > 1) {
             plusOne--;
         }
         String res = String.valueOf(plusOne);
@@ -103,8 +123,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void Go(View view) {
         TextView ogo = findViewById(R.id.ogo);
-        String description = "Ваш заказ будет готов \n через 15-50 минут.\n\n" +
-                "Спасибо за ожиdание :3";
-        ogo.setText(description);
+        TextView tView = findViewById(R.id.sum);
+        if (tView.getText().equals("0")) {
+            ogo.setText(R.string.err);
+        } else {
+            ogo.setText(R.string.desc);
+        }
     }
 }

@@ -12,4 +12,8 @@
     <string name="sum">0</string>
     <string name="doll">$</string>
     <string name="go">Заказать)</string>
+    <string name="desc">Ваш заказ будет готов \n через 15–50 минут.\n\n Спасибо за ожиdание :3</string>
+    <string name="err">Вы же ничего не заказали(((</string>
+    <string name="logo">Logo</string>
+
 </resources>
